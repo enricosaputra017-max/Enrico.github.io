@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enrico Saputra Kusuma - Information Systems Student Portfolio">
+  <title>Enrico Saputra Kusuma | Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #142b4a;
+      --blue: #315b88;
+      --light: #f5f7fa;
+      --white: #ffffff;
+      --text: #253247;
+      --muted: #6b7789;
+      --border: #e5eaf0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--light);
+      padding: 115px 0;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 680px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-block;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 85px 0;
+      scroll-margin-top: 70px;
+    }
+
+    .section-title {
+      margin-bottom: 35px;
+    }
+
+    .section-title span {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      color: var(--navy);
+      font-size: 32px;
+      margin-top: 7px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* PROFILE */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .profile-grid p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 27px;
+      border-radius: 12px;
+    }
+
+    .info-card h3 {
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .info-row {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-row:last-child {
+      border: none;
+    }
+
+    .info-row strong {
+      display: block;
+      font-size: 13px;
+      color: var(--navy);
+    }
+
+    .info-row span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      background: white;
+      transition: .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(20,43,74,.08);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #edf2f8;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* EXPERIENCE */
+    .timeline {
+      border-left: 2px solid var(--border);
+      margin-left: 8px;
+      padding-left: 28px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--blue);
+      position: absolute;
+      left: -35px;
+      top: 8px;
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+    }
+
+    .timeline-item .date {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .skill-box {
+      background: var(--light);
+      padding: 28px;
+      border-radius: 12px;
+    }
+
+    .skill-box h3 {
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 9px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ACHIEVEMENTS */
+    .achievement-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .achievement {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .achievement h3 {
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .achievement p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: #d0d9e5;
+      margin-bottom: 25px;
+    }
+
+    .contact .btn {
+      background: white;
+      color: var(--navy);
+    }
+
+    footer {
+      background: #10233c;
+      color: #c7d0dc;
+      text-align: center;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .profile-grid,
+      .card-grid,
+      .skills-grid,
+      .achievement-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 85px 0;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="#home" class="logo">ENRICO.</a>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <span class="eyebrow">Information Systems Student</span>
+
+        <h1>Hi, I'm Enrico Saputra Kusuma.</h1>
+
+        <p>
+          An Information Systems student at BINUS University,
+          passionate about analyzing business needs, understanding
+          user requirements, and creating practical solutions through
+          technology, design, and data.
+        </p>
+
+        <div class="buttons">
+          <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile">
+      <div class="container">
+        <div class="section-title">
+          <span>Get to Know Me</span>
+          <h2>Profile & Education</h2>
+        </div>
+
+        <div class="profile-grid">
+          <div>
+            <p>
+              I am an Information Systems student at BINUS University
+              with a passion for analyzing business needs, understanding
+              user requirements, and working with Database Design,
+              UI/UX Design, and Data Visualization.
+            </p>
+
+            <p>
+              I enjoy exploring how technology, design, and data can
+              work together to create practical and user-friendly
+              solutions. Throughout my academic journey, I have
+              completed several projects involving information systems
+              development, system analysis and design, database
+              management, UI/UX design, and data analytics.
+            </p>
+
+            <p>
+              Through these projects and organizational experiences,
+              I continue to develop my technical, analytical, and
+              problem-solving skills.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Education</h3>
+
+            <div class="info-row">
+              <strong>University</strong>
+              <span>BINUS University</span>
+            </div>
+
+            <div class="info-row">
+              <strong>Major</strong>
+              <span>Undergraduate School of Information Systems</span>
+            </div>
+
+            <div class="info-row">
+              <strong>Period</strong>
+              <span>2024 – Present</span>
+            </div>
+
+            <div class="info-row">
+              <strong>Academic Focus</strong>
+              <span>Business Intelligence</span>
+            </div>
+
+            <div class="info-row">
+              <strong>GPA</strong>
+              <span>3.91 / 4.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" style="background:var(--light)">
+      <div class="container">
+        <div class="section-title">
+          <span>My Academic Works</span>
+          <h2>Featured Projects</h2>
+          <p>A selection of academic projects and practical experiences.</p>
+        </div>
+
+        <div class="card-grid">
+
+          <div class="card">
+            <span class="tag">UI/UX Design</span>
+            <h3>STARWAVE</h3>
+            <p>
+              An academic project focused on UI/UX design,
+              user experience, and interface prototyping.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Database Design</span>
+            <h3>JNE</h3>
+            <p>
+              An academic project involving database design
+              and information management.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag">System Analysis & Design</span>
+            <h3>StSport</h3>
+            <p>
+              An information systems project focusing on
+              system analysis and design.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Project Management</span>
+            <h3>SmartBudget</h3>
+            <p>
+              An academic information systems project
+              involving project planning and management.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Data Visualization</span>
+            <h3>Netflix Customer Churn</h3>
+            <p>
+              A data analytics project exploring customer
+              churn through data visualization.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Data Modeling</span>
+            <h3>Brazil Food & Goods Delivery</h3>
+            <p>
+              An academic project focused on data modeling
+              and database structure.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <span>My Journey</span>
+          <h2>Experience</h2>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <span class="date">February 2026 – Present</span>
+            <h3>Part-Time Assistant – Information Systems Laboratory</h3>
+            <p>
+              Assisted 78 students in Database Fundamentals using
+              Oracle APEX and User Experience Research and Design
+              using Figma. Received the Dedicated Assistant Award.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="date">2025</span>
+            <h3>Project Manager – Company Visit 2025 ADIWIDIA</h3>
+            <p>
+              Led a team of 39 members across five divisions,
+              coordinated event preparation, monitored timelines,
+              and handled company coordination.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="date">2025</span>
+            <h3>Administration Coordinator – DIG IN 2025 FUSION</h3>
+            <p>
+              Coordinated administrative responsibilities
+              and supported the administration team.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="date">2025</span>
+            <h3>Education Commission Coordinator</h3>
+            <p>
+              Supported education commission activities
+              and managed web article master data.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" style="background:var(--light)">
+      <div class="container">
+        <div class="section-title">
+          <span>What I Can Do</span>
+          <h2>Skills & Tools</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-box">
+            <h3>Soft Skills</h3>
+            <div class="skill-list">
+              <span class="skill">Leadership</span>
+              <span class="skill">Communication</span>
+              <span class="skill">Teamwork</span>
+              <span class="skill">Team Management</span>
+              <span class="skill">Time Management</span>
+              <span class="skill">Innovative Thinking</span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <h3>Hard Skills & Tools</h3>
+            <div class="skill-list">
+              <span class="skill">Figma</span>
+              <span class="skill">draw.io</span>
+              <span class="skill">Microsoft Excel</span>
+              <span class="skill">Microsoft Word</span>
+              <span class="skill">Canva</span>
+              <span class="skill">Oracle APEX</span>
+              <span class="skill">Power BI</span>
+              <span class="skill">Basic Python</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <span>Recognition</span>
+          <h2>Achievements & Certifications</h2>
+        </div>
+
+        <h3 style="color:var(--navy);margin-bottom:18px">
+          Achievements
+        </h3>
+
+        <div class="achievement-list">
+          <div class="achievement">
+            <h3>Dean's List</h3>
+            <p>School of Information Systems – 2025</p>
+          </div>
+
+          <div class="achievement">
+            <h3>Top 5% Outstanding Student</h3>
+            <p>School of Information Systems, BINUS University – 2026</p>
+          </div>
+
+          <div class="achievement">
+            <h3>Dedicated Part-Time Assistant Award</h3>
+            <p>Information Systems Laboratory – Even Semester 2025/2026</p>
+          </div>
+        </div>
+
+        <h3 style="color:var(--navy);margin:35px 0 18px">
+          Certifications
+        </h3>
+
+        <div class="achievement-list">
+          <div class="achievement">
+            <h3>Applied Database Systems using Oracle AI Database</h3>
+            <p>Oracle Academy</p>
+          </div>
+
+          <div class="achievement">
+            <h3>Microsoft Certified: Azure AI Basic Fundamentals</h3>
+            <p>Microsoft</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Let's Connect!</h2>
+        <p>
+          Feel free to reach out for internship opportunities,
+          collaborations, or professional connections.
+        </p>
+
+        <div class="buttons" style="justify-content:center">
+          <a class="btn" href="mailto:enricosaputra017@gmail.com">
+            Email Me
+          </a>
+
+          <a class="btn"
+             href="https://www.linkedin.com/in/enrico-saputra-kusuma-401572229/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Enrico Saputra Kusuma. All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
