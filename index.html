@@ -183,11 +183,11 @@
 
     /* PROFILE */
     .profile-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: start;
-    }
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 220px;
+    gap: 30px;
+    align-items: start;
+  }
 
     .profile-grid p {
       color: var(--muted);
@@ -394,7 +394,7 @@
     }
     /* PROFILE IMAGE */
 .profile-image {
-  width: 220px;
+  width: 100%;
   height: 260px;
   object-fit: cover;
   border-radius: 14px;
@@ -540,68 +540,79 @@
           <h2>Profile & Education</h2>
         </div>
 
-        <div class="profile-grid">
-            <div>
-        <img
-          src="images/profile.png"
-          alt="Enrico Saputra Kusuma"
-          class="profile-image"
-          />
-            
-            <p>
-              I am an Information Systems student at BINUS University
-              with a passion for analyzing business needs, understanding
-              user requirements, and working with Database Design,
-              UI/UX Design, and Data Visualization.
-            </p>
+        
+<div class="profile-grid">
 
-            <p>
-              I enjoy exploring how technology, design, and data can
-              work together to create practical and user-friendly
-              solutions. Throughout my academic journey, I have
-              completed several projects involving information systems
-              development, system analysis and design, database
-              management, UI/UX design, and data analytics.
-            </p>
+  <!-- DESCRIPTION -->
+  <div class="profile-description">
 
-            <p>
-              Through these projects and organizational experiences,
-              I continue to develop my technical, analytical, and
-              problem-solving skills.
-            </p>
-          </div>
+    <p>
+      I am an Information Systems student at BINUS University
+      with a passion for analyzing business needs, understanding
+      user requirements, and working with Database Design,
+      UI/UX Design, and Data Visualization.
+    </p>
 
-          <div class="info-card">
-            <h3>Education</h3>
+    <p>
+      I enjoy exploring how technology, design, and data can
+      work together to create practical and user-friendly
+      solutions. Throughout my academic journey, I have
+      completed several projects involving information systems
+      development, system analysis and design, database
+      management, UI/UX design, and data analytics.
+    </p>
 
-            <div class="info-row">
-              <strong>University</strong>
-              <span>BINUS University</span>
-            </div>
+    <p>
+      Through these projects and organizational experiences,
+      I continue to develop my technical, analytical, and
+      problem-solving skills.
+    </p>
 
-            <div class="info-row">
-              <strong>Major</strong>
-              <span>Undergraduate School of Information Systems</span>
-            </div>
+  </div>
 
-            <div class="info-row">
-              <strong>Period</strong>
-              <span>2024 – Present</span>
-            </div>
+  <!-- EDUCATION -->
+  <div class="info-card">
 
-            <div class="info-row">
-              <strong>Academic Focus</strong>
-              <span>Business Intelligence</span>
-            </div>
+    <h3>Education</h3>
 
-            <div class="info-row">
-              <strong>GPA</strong>
-              <span>3.91 / 4.00</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="info-row">
+      <strong>University</strong>
+      <span>BINUS University</span>
+    </div>
+
+    <div class="info-row">
+      <strong>Major</strong>
+      <span>Undergraduate School of Information Systems</span>
+    </div>
+
+    <div class="info-row">
+      <strong>Period</strong>
+      <span>2024 – Present</span>
+    </div>
+
+    <div class="info-row">
+      <strong>Academic Focus</strong>
+      <span>Business Intelligence</span>
+    </div>
+
+    <div class="info-row">
+      <strong>GPA</strong>
+      <span>3.91 / 4.00</span>
+    </div>
+
+  </div>
+
+  <!-- PROFILE IMAGE -->
+  <div class="profile-photo">
+    <img
+      src="images/profile.png"
+      alt="Enrico Saputra Kusuma"
+      class="profile-image"
+    />
+  </div>
+
+</div>
+
 
     <!-- PROJECTS -->
     <section id="projects" style="background:var(--light)">
