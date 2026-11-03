@@ -46,7 +46,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,.95);
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(10px);
     }
@@ -84,38 +84,38 @@
       cursor: pointer;
     }
 
-    /* HERO SECTION (PERBAIKAN: DUA KOLOM AKAN MENYAMPING) */
+    /* HERO SECTION */
     .hero {
       background: var(--light);
-      padding: 100px 0;
+      padding: 90px 0;
     }
 
     .hero-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 50px;
+      gap: 40px;
     }
 
     .hero-content {
-      flex: 1.3;
-      max-width: 650px;
+      flex: 1.2;
     }
 
     .hero-image-wrapper {
-      flex: 0.9;
+      flex: 0.8;
       display: flex;
       justify-content: flex-end;
     }
 
     .hero-image {
       width: 100%;
-      max-width: 340px;
-      height: 400px;
+      max-width: 320px;
+      height: 380px;
       object-fit: cover;
       border-radius: 16px;
       border: 4px solid var(--white);
-      box-shadow: 0 10px 30px rgba(20,43,74,.15);
+      box-shadow: 0 10px 30px rgba(20, 43, 74, 0.15);
+      background-color: #e2e8f0;
     }
 
     .eyebrow {
@@ -128,7 +128,7 @@
 
     h1 {
       color: var(--navy);
-      font-size: clamp(34px, 5vw, 54px);
+      font-size: clamp(34px, 5vw, 52px);
       line-height: 1.15;
       margin: 18px 0;
     }
@@ -151,7 +151,7 @@
       font-weight: 700;
       font-size: 14px;
       display: inline-block;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .btn-primary {
@@ -204,14 +204,10 @@
     }
 
     /* PROFILE */
-    #profile {
-      padding: 85px 0;
-    }
-
     .profile-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
+      gap: 35px;
       align-items: start;
     }
 
@@ -263,12 +259,12 @@
       border-radius: 12px;
       padding: 25px;
       background: white;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(20,43,74,.08);
+      box-shadow: 0 12px 30px rgba(20, 43, 74, 0.08);
     }
 
     .card h3 {
@@ -387,7 +383,7 @@
       background: #f5f7fa;
       padding: 10px;
       cursor: pointer;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .certificate-card img:hover {
@@ -437,14 +433,10 @@
     }
 
     /* RESPONSIVE */
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
       .hero-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
-      }
-
-      .hero-content {
-        max-width: 100%;
       }
 
       .hero-image-wrapper {
@@ -453,6 +445,13 @@
 
       .buttons {
         justify-content: center;
+      }
+
+      .profile-grid,
+      .card-grid,
+      .skills-grid,
+      .certificate-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -476,21 +475,6 @@
 
       .nav-links.active {
         display: flex;
-      }
-
-      .profile-grid,
-      .card-grid,
-      .skills-grid,
-      .certificate-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 65px 0;
-      }
-
-      section {
-        padding: 65px 0;
       }
     }
   </style>
@@ -521,276 +505,11 @@
     <!-- HOME / HERO SECTION -->
     <section class="hero" id="home">
       <div class="container hero-container">
-        <!-- Teks di Sebelah Kiri -->
+        <!-- Teks Kiri -->
         <div class="hero-content">
           <span class="eyebrow">Information Systems Student</span>
           <h1>Hi, I'm Enrico Saputra Kusuma.</h1>
           <p>
             An Information Systems student at BINUS University,
             passionate about analyzing business needs, understanding
-            user requirements, and creating practical solutions through
-            technology, design, and data.
-          </p>
-
-          <div class="buttons">
-            <a href="#projects" class="btn btn-primary">Explore My Projects</a>
-            <a href="#contact" class="btn btn-outline">Get in Touch</a>
-          </div>
-        </div>
-
-        <!-- Foto Profile di Sebelah Kanan -->
-        <div class="hero-image-wrapper">
-          <img
-            src="images/profile.png"
-            alt="Enrico Saputra Kusuma"
-            class="hero-image"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFILE SECTION -->
-    <section id="profile">
-      <div class="container">
-        <div class="section-title">
-          <span>Get to Know Me</span>
-          <h2>Profile & Education</h2>
-        </div>
-
-        <div class="profile-grid">
-          <!-- Description -->
-          <div class="profile-description">
-            <p>
-              I am an Information Systems student at BINUS University
-              with a passion for analyzing business needs, understanding
-              user requirements, and working with Database Design,
-              UI/UX Design, and Data Visualization.
-            </p>
-            <p>
-              I enjoy exploring how technology, design, and data can
-              work together to create practical and user-friendly
-              solutions. Throughout my academic journey, I have
-              completed several projects involving information systems
-              development, system analysis and design, database
-              management, UI/UX design, and data analytics.
-            </p>
-            <p>
-              Through these projects and organizational experiences,
-              I continue to develop my technical, analytical, and
-              problem-solving skills.
-            </p>
-          </div>
-
-          <!-- Education Card -->
-          <div class="info-card">
-            <h3>Education</h3>
-            <div class="info-row">
-              <strong>University</strong>
-              <span>BINUS University</span>
-            </div>
-            <div class="info-row">
-              <strong>Major</strong>
-              <span>Undergraduate School of Information Systems</span>
-            </div>
-            <div class="info-row">
-              <strong>Period</strong>
-              <span>2024 – Present</span>
-            </div>
-            <div class="info-row">
-              <strong>Academic Focus</strong>
-              <span>Business Intelligence</span>
-            </div>
-            <div class="info-row">
-              <strong>GPA</strong>
-              <span>3.91 / 4.00</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" style="background:var(--light)">
-      <div class="container">
-        <div class="section-title">
-          <span>My Academic Works</span>
-          <h2>Featured Projects</h2>
-          <p>A selection of academic projects and practical experiences.</p>
-        </div>
-
-        <div class="card-grid">
-          <div class="card">
-            <span class="tag">UI/UX Design</span>
-            <h3>STARWAVE</h3>
-            <p>An academic project focused on UI/UX design, user experience, and interface prototyping.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Database Design</span>
-            <h3>JNE</h3>
-            <p>An academic project involving database design and information management.</p>
-          </div>
-          <div class="card">
-            <span class="tag">System Analysis & Design</span>
-            <h3>StSport</h3>
-            <p>An information systems project focusing on system analysis and design.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Project Management</span>
-            <h3>SmartBudget</h3>
-            <p>An academic information systems project involving project planning and management.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Data Visualization</span>
-            <h3>Netflix Customer Churn</h3>
-            <p>A data analytics project exploring customer churn through data visualization.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Data Modeling</span>
-            <h3>Brazil Food & Goods Delivery</h3>
-            <p>An academic project focused on data modeling and database structure.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <div class="section-title">
-          <span>My Journey</span>
-          <h2>Experience</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="date">February 2026 – Present</span>
-            <h3>Part-Time Assistant – Information Systems Laboratory</h3>
-            <p>Assisted 78 students in Database Fundamentals using Oracle APEX and User Experience Research and Design using Figma. Received the Dedicated Assistant Award.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="date">2025</span>
-            <h3>Project Manager – Company Visit 2025 ADIWIDIA</h3>
-            <p>Led a team of 39 members across five divisions, coordinated event preparation, monitored timelines, and handled company coordination.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="date">2025</span>
-            <h3>Administration Coordinator – DIG IN 2025 FUSION</h3>
-            <p>Coordinated administrative responsibilities and supported the administration team.</p>
-          </div>
-          <div class="timeline-item">
-            <span class="date">2025</span>
-            <h3>Education Commission Coordinator</h3>
-            <p>Supported education commission activities and managed web article master data.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" style="background:var(--light)">
-      <div class="container">
-        <div class="section-title">
-          <span>What I Can Do</span>
-          <h2>Skills & Tools</h2>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-box">
-            <h3>Soft Skills</h3>
-            <div class="skill-list">
-              <span class="skill">Leadership</span>
-              <span class="skill">Communication</span>
-              <span class="skill">Teamwork</span>
-              <span class="skill">Team Management</span>
-              <span class="skill">Time Management</span>
-              <span class="skill">Innovative Thinking</span>
-            </div>
-          </div>
-          <div class="skill-box">
-            <h3>Hard Skills & Tools</h3>
-            <div class="skill-list">
-              <span class="skill">Figma</span>
-              <span class="skill">draw.io</span>
-              <span class="skill">Microsoft Excel</span>
-              <span class="skill">Microsoft Word</span>
-              <span class="skill">Canva</span>
-              <span class="skill">Oracle APEX</span>
-              <span class="skill">Power BI</span>
-              <span class="skill">Basic Python</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACHIEVEMENTS -->
-    <section id="achievements">
-      <div class="container">
-        <div class="section-title">
-          <span>Recognition</span>
-          <h2>Achievements & Certifications</h2>
-          <p>My academic achievements, awards, and professional certifications.</p>
-        </div>
-
-        <div class="certificate-grid">
-          <div class="certificate-card">
-            <img src="images/oracle.png" alt="Oracle Academy Certificate">
-            <h3>Oracle Academy</h3>
-            <p>Completed Applied Database Systems using Oracle AI Database, demonstrating knowledge of database systems and Oracle technologies.</p>
-          </div>
-          <div class="certificate-card">
-            <img src="images/ai.png" alt="Microsoft Azure AI Certificate">
-            <h3>Microsoft Azure AI</h3>
-            <p>Earned Microsoft Certified: Azure AI Basic Fundamentals, recognizing foundational knowledge in artificial intelligence.</p>
-          </div>
-          <div class="certificate-card">
-            <img src="images/dedicated.jpeg" alt="Dedicated Assistant Award">
-            <h3>Dedicated Part-Time Assistant Award</h3>
-            <p>Recognized for dedication and valuable contributions as a Part-Time Assistant at the Information Systems Laboratory during Even Semester 2025/2026.</p>
-          </div>
-          <div class="certificate-card">
-            <img src="images/deanlist.png" alt="Dean's List Award">
-            <h3>Dean's List</h3>
-            <p>Recognized for outstanding academic performance at the School of Information Systems, BINUS University, 2025.</p>
-          </div>
-          <div class="certificate-card">
-            <img src="images/exellence.jpeg" alt="Certificate of Excellence">
-            <h3>Top 5% Outstanding Student</h3>
-            <p>Recognized among the top 5% outstanding students of the School of Information Systems, BINUS University, 2026.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Let's Connect!</h2>
-        <p>Feel free to reach out for internship opportunities, collaborations, or professional connections.</p>
-        <div class="buttons" style="justify-content:center">
-          <a class="btn" href="mailto:enricosaputra017@gmail.com">Email Me</a>
-          <a class="btn" href="https://www.linkedin.com/in/enrico-saputra-kusuma-401572229/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    © 2026 Enrico Saputra Kusuma. All Rights Reserved.
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("active");
-      });
-    });
-  </script>
-
-</body>
-</html>
+            user requirements,
