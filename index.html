@@ -192,15 +192,6 @@
       align-items: start;
     }
 
-    .profile-image {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 14px;
-      border: 4px solid white;
-      box-shadow: 0 8px 25px rgba(20,43,74,.12);
-    }
-
     .profile-description p {
       color: var(--muted);
       margin-bottom: 15px;
@@ -235,6 +226,15 @@
     .info-row span {
       font-size: 14px;
       color: var(--muted);
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 4px solid white;
+      box-shadow: 0 8px 25px rgba(20,43,74,.12);
     }
 
     /* CARDS */
@@ -468,9 +468,7 @@
   <header>
     <nav class="container">
       <a href="#home" class="logo">ENRICO.</a>
-
       <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#profile">Profile</a></li>
@@ -489,16 +487,13 @@
     <section class="hero" id="home">
       <div class="container hero-content">
         <span class="eyebrow">Information Systems Student</span>
-
         <h1>Hi, I'm Enrico Saputra Kusuma.</h1>
-
         <p>
           An Information Systems student at BINUS University,
           passionate about analyzing business needs, understanding
           user requirements, and creating practical solutions through
           technology, design, and data.
         </p>
-
         <div class="buttons">
           <a href="#projects" class="btn btn-primary">Explore My Projects</a>
           <a href="#contact" class="btn btn-outline">Get in Touch</a>
@@ -513,9 +508,9 @@
           <span>Get to Know Me</span>
           <h2>Profile & Education</h2>
         </div>
-        
+
         <div class="profile-grid">
-          <!-- DESCRIPTION -->
+          <!-- Kolom 1: Description -->
           <div class="profile-description">
             <p>
               I am an Information Systems student at BINUS University
@@ -538,7 +533,7 @@
             </p>
           </div>
 
-          <!-- EDUCATION -->
+          <!-- Kolom 2: Education -->
           <div class="info-card">
             <h3>Education</h3>
             <div class="info-row">
@@ -563,7 +558,7 @@
             </div>
           </div>
 
-          <!-- PROFILE IMAGE -->
+          <!-- Kolom 3: Photo -->
           <div class="profile-photo">
             <img
               src="images/profile.png"
@@ -588,55 +583,32 @@
           <div class="card">
             <span class="tag">UI/UX Design</span>
             <h3>STARWAVE</h3>
-            <p>
-              An academic project focused on UI/UX design,
-              user experience, and interface prototyping.
-            </p>
+            <p>An academic project focused on UI/UX design, user experience, and interface prototyping.</p>
           </div>
-
           <div class="card">
             <span class="tag">Database Design</span>
             <h3>JNE</h3>
-            <p>
-              An academic project involving database design
-              and information management.
-            </p>
+            <p>An academic project involving database design and information management.</p>
           </div>
-
           <div class="card">
             <span class="tag">System Analysis & Design</span>
             <h3>StSport</h3>
-            <p>
-              An information systems project focusing on
-              system analysis and design.
-            </p>
+            <p>An information systems project focusing on system analysis and design.</p>
           </div>
-
           <div class="card">
             <span class="tag">Project Management</span>
             <h3>SmartBudget</h3>
-            <p>
-              An academic information systems project
-              involving project planning and management.
-            </p>
+            <p>An academic information systems project involving project planning and management.</p>
           </div>
-
           <div class="card">
             <span class="tag">Data Visualization</span>
             <h3>Netflix Customer Churn</h3>
-            <p>
-              An data analytics project exploring customer
-              churn through data visualization.
-            </p>
+            <p>A data analytics project exploring customer churn through data visualization.</p>
           </div>
-
           <div class="card">
             <span class="tag">Data Modeling</span>
             <h3>Brazil Food & Goods Delivery</h3>
-            <p>
-              An academic project focused on data modeling
-              and database structure.
-            </p>
+            <p>An academic project focused on data modeling and database structure.</p>
           </div>
         </div>
       </div>
@@ -654,39 +626,22 @@
           <div class="timeline-item">
             <span class="date">February 2026 – Present</span>
             <h3>Part-Time Assistant – Information Systems Laboratory</h3>
-            <p>
-              Assisted 78 students in Database Fundamentals using
-              Oracle APEX and User Experience Research and Design
-              using Figma. Received the Dedicated Assistant Award.
-            </p>
+            <p>Assisted 78 students in Database Fundamentals using Oracle APEX and User Experience Research and Design using Figma. Received the Dedicated Assistant Award.</p>
           </div>
-
           <div class="timeline-item">
             <span class="date">2025</span>
             <h3>Project Manager – Company Visit 2025 ADIWIDIA</h3>
-            <p>
-              Led a team of 39 members across five divisions,
-              coordinated event preparation, monitored timelines,
-              and handled company coordination.
-            </p>
+            <p>Led a team of 39 members across five divisions, coordinated event preparation, monitored timelines, and handled company coordination.</p>
           </div>
-
           <div class="timeline-item">
             <span class="date">2025</span>
             <h3>Administration Coordinator – DIG IN 2025 FUSION</h3>
-            <p>
-              Coordinated administrative responsibilities
-              and supported the administration team.
-            </p>
+            <p>Coordinated administrative responsibilities and supported the administration team.</p>
           </div>
-
           <div class="timeline-item">
             <span class="date">2025</span>
             <h3>Education Commission Coordinator</h3>
-            <p>
-              Supported education commission activities
-              and managed web article master data.
-            </p>
+            <p>Supported education commission activities and managed web article master data.</p>
           </div>
         </div>
       </div>
@@ -712,7 +667,6 @@
               <span class="skill">Innovative Thinking</span>
             </div>
           </div>
-
           <div class="skill-box">
             <h3>Hard Skills & Tools</h3>
             <div class="skill-list">
@@ -743,47 +697,27 @@
           <div class="certificate-card">
             <img src="images/oracle.png" alt="Oracle Academy Certificate">
             <h3>Oracle Academy</h3>
-            <p>
-              Completed Applied Database Systems using Oracle AI Database,
-              demonstrating knowledge of database systems and Oracle technologies.
-            </p>
+            <p>Completed Applied Database Systems using Oracle AI Database, demonstrating knowledge of database systems and Oracle technologies.</p>
           </div>
-
           <div class="certificate-card">
             <img src="images/ai.png" alt="Microsoft Azure AI Certificate">
             <h3>Microsoft Azure AI</h3>
-            <p>
-              Earned Microsoft Certified: Azure AI Basic Fundamentals,
-              recognizing foundational knowledge in artificial intelligence.
-            </p>
+            <p>Earned Microsoft Certified: Azure AI Basic Fundamentals, recognizing foundational knowledge in artificial intelligence.</p>
           </div>
-
           <div class="certificate-card">
             <img src="images/dedicated.jpeg" alt="Dedicated Assistant Award">
             <h3>Dedicated Part-Time Assistant Award</h3>
-            <p>
-              Recognized for dedication and valuable contributions
-              as a Part-Time Assistant at the Information Systems Laboratory
-              during Even Semester 2025/2026.
-            </p>
+            <p>Recognized for dedication and valuable contributions as a Part-Time Assistant at the Information Systems Laboratory during Even Semester 2025/2026.</p>
           </div>
-
           <div class="certificate-card">
             <img src="images/deanlist.png" alt="Dean's List Award">
             <h3>Dean's List</h3>
-            <p>
-              Recognized for outstanding academic performance
-              at the School of Information Systems, BINUS University, 2025.
-            </p>
+            <p>Recognized for outstanding academic performance at the School of Information Systems, BINUS University, 2025.</p>
           </div>
-
           <div class="certificate-card">
             <img src="images/exellence.jpeg" alt="Certificate of Excellence">
             <h3>Top 5% Outstanding Student</h3>
-            <p>
-              Recognized among the top 5% outstanding students
-              of the School of Information Systems, BINUS University, 2026.
-            </p>
+            <p>Recognized among the top 5% outstanding students of the School of Information Systems, BINUS University, 2026.</p>
           </div>
         </div>
       </div>
@@ -793,21 +727,10 @@
     <section class="contact" id="contact">
       <div class="container">
         <h2>Let's Connect!</h2>
-        <p>
-          Feel free to reach out for internship opportunities,
-          collaborations, or professional connections.
-        </p>
-
+        <p>Feel free to reach out for internship opportunities, collaborations, or professional connections.</p>
         <div class="buttons" style="justify-content:center">
-          <a class="btn" href="mailto:enricosaputra017@gmail.com">
-            Email Me
-          </a>
-          <a class="btn"
-             href="https://www.linkedin.com/in/enrico-saputra-kusuma-401572229/"
-             target="_blank"
-             rel="noopener noreferrer">
-            LinkedIn
-          </a>
+          <a class="btn" href="mailto:enricosaputra017@gmail.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/enrico-saputra-kusuma-401572229/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
