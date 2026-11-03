@@ -84,14 +84,38 @@
       cursor: pointer;
     }
 
-    /* HERO */
+    /* HERO SECTION (PERBAIKAN: DUA KOLOM AKAN MENYAMPING) */
     .hero {
       background: var(--light);
-      padding: 115px 0;
+      padding: 100px 0;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
     }
 
     .hero-content {
-      max-width: 760px;
+      flex: 1.3;
+      max-width: 650px;
+    }
+
+    .hero-image-wrapper {
+      flex: 0.9;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 340px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 4px solid var(--white);
+      box-shadow: 0 10px 30px rgba(20,43,74,.15);
     }
 
     .eyebrow {
@@ -104,7 +128,7 @@
 
     h1 {
       color: var(--navy);
-      font-size: clamp(36px, 6vw, 60px);
+      font-size: clamp(34px, 5vw, 54px);
       line-height: 1.15;
       margin: 18px 0;
     }
@@ -112,7 +136,6 @@
     .hero p {
       color: var(--muted);
       font-size: 17px;
-      max-width: 680px;
     }
 
     .buttons {
@@ -187,8 +210,8 @@
 
     .profile-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 280px;
-      gap: 30px;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
       align-items: start;
     }
 
@@ -226,15 +249,6 @@
     .info-row span {
       font-size: 14px;
       color: var(--muted);
-    }
-
-    .profile-image {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 14px;
-      border: 4px solid white;
-      box-shadow: 0 8px 25px rgba(20,43,74,.12);
     }
 
     /* CARDS */
@@ -423,6 +437,25 @@
     }
 
     /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-image-wrapper {
+        justify-content: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+    }
+
     @media (max-width: 768px) {
       .menu-btn {
         display: block;
@@ -453,7 +486,7 @@
       }
 
       .hero {
-        padding: 85px 0;
+        padding: 65px 0;
       }
 
       section {
@@ -468,7 +501,9 @@
   <header>
     <nav class="container">
       <a href="#home" class="logo">ENRICO.</a>
+
       <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#profile">Profile</a></li>
@@ -483,25 +518,38 @@
 
   <main>
 
-    <!-- HOME -->
+    <!-- HOME / HERO SECTION -->
     <section class="hero" id="home">
-      <div class="container hero-content">
-        <span class="eyebrow">Information Systems Student</span>
-        <h1>Hi, I'm Enrico Saputra Kusuma.</h1>
-        <p>
-          An Information Systems student at BINUS University,
-          passionate about analyzing business needs, understanding
-          user requirements, and creating practical solutions through
-          technology, design, and data.
-        </p>
-        <div class="buttons">
-          <a href="#projects" class="btn btn-primary">Explore My Projects</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <div class="container hero-container">
+        <!-- Teks di Sebelah Kiri -->
+        <div class="hero-content">
+          <span class="eyebrow">Information Systems Student</span>
+          <h1>Hi, I'm Enrico Saputra Kusuma.</h1>
+          <p>
+            An Information Systems student at BINUS University,
+            passionate about analyzing business needs, understanding
+            user requirements, and creating practical solutions through
+            technology, design, and data.
+          </p>
+
+          <div class="buttons">
+            <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Foto Profile di Sebelah Kanan -->
+        <div class="hero-image-wrapper">
+          <img
+            src="images/profile.png"
+            alt="Enrico Saputra Kusuma"
+            class="hero-image"
+          />
         </div>
       </div>
     </section>
 
-    <!-- PROFILE -->
+    <!-- PROFILE SECTION -->
     <section id="profile">
       <div class="container">
         <div class="section-title">
@@ -510,7 +558,7 @@
         </div>
 
         <div class="profile-grid">
-          <!-- Kolom 1: Description -->
+          <!-- Description -->
           <div class="profile-description">
             <p>
               I am an Information Systems student at BINUS University
@@ -533,7 +581,7 @@
             </p>
           </div>
 
-          <!-- Kolom 2: Education -->
+          <!-- Education Card -->
           <div class="info-card">
             <h3>Education</h3>
             <div class="info-row">
@@ -556,15 +604,6 @@
               <strong>GPA</strong>
               <span>3.91 / 4.00</span>
             </div>
-          </div>
-
-          <!-- Kolom 3: Photo -->
-          <div class="profile-photo">
-            <img
-              src="images/profile.png"
-              alt="Enrico Saputra Kusuma"
-              class="profile-image"
-            />
           </div>
         </div>
       </div>
